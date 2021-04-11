@@ -10,7 +10,130 @@
   src: url("../fonts/Noto-Sans.woff2");
 }
 
+@font-face {
+  font-family: "IranSans";
+  src: url("../fonts/IRANSansWeb.woff");
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
 body{
   margin: 0;
   font-family: "Noto Sans";
+}
+
+.header{
+  border-bottom: 1px solid #d0d0d0;
+  .title{
+    display: flex;
+    justify-content: center;
+    font-family: "IranSans";
+    margin: 1rem 0;
+    color: var(--color-main-dark);
+  }
+  .search{
+    display: flex;
+    justify-content: center;
+  }
+  .cityInfo{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+    direction: rtl;
+    font-family: "IranSans";
+  }
+}
+
+.search{
+  &__form{
+    direction: rtl;
+    border: 1px solid silver;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    border-radius: 7px;
+    &:focus-within{
+      box-shadow: 0 0 4px 0 var(--color-main-orange);
+      border-color: #ec6e4c75;
+    }
+    &-btn{
+      font-family: "IranSans";
+      border: none;
+      background-color: var(--color-main-orange);
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 4px;
+      cursor: pointer;
+      color: white;
+    }
+    &-txt{
+      border: none;
+      width: 100%;
+      padding: 10px;
+      border-bottom-right-radius: 6px;
+      border-top-right-radius: 6px;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}
+
+.weathers{
+  margin-top: 2rem;
+  direction: rtl;
+  .weather{
+    &__card{
+      direction: rtl;
+      box-shadow: 0 0 4px 0 #ec6e4c;
+      border-radius: 10px;
+      background-color: #fdfdfd;
+      margin-top: 1.5rem;
+      padding: .9rem;
+      & aside{
+        display: flex;
+        justify-content: space-around;
+      }
+      &-desc{
+        font-family: "IranSans";
+      }
+      &-day{
+        font-family: "IranSans";
+        color: var(--color-main-orange);
+      }
+      &-humidity{
+        font-family: "IranSans";
+      }
+      &-date{
+        font-family: "IranSans";
+      }
+    }
+    &__error{
+      font-family: "IranSans";
+      color: var(--color-main-orange);
+    }
+  }
+}
+
+.footer{
+  margin-top: 4rem;
+  &__row{
+    background-color: var(--color-main-dark);
+  }
+  &__col{
+    display: flex;
+    justify-content: center;
+    & p{
+      font-size: 0.85rem;
+      color: #fff;
+    }
+  }
+}
+
+.loader{
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
 }
