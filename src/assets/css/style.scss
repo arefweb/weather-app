@@ -1,0 +1,16 @@
+@import "grid";
+
+:root{
+  --color-main-orange: #ec6e4c;
+  --color-main-dark: #48484a;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/Noto-Sans.woff2");
+}
+
+body{
+  margin: 0;
+  font-family: "Noto Sans";
+}
