@@ -80,7 +80,8 @@ function App() {
   };
 
   const getImage = (icon)=>{
-    return `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    let newIcon = icon.slice(0, 2) + "d";
+    return `http://openweathermap.org/img/wn/${newIcon}@2x.png`;
   }
 
   function numberWithCommas(x) {
